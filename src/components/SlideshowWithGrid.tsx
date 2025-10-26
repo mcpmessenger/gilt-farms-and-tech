@@ -28,7 +28,7 @@ interface SlideshowWithGridProps {
 }
 
 export function SlideshowWithGrid({ 
-  logoImage = '/Logo image Oct 26, 2025, 01_28_59 AM.png',
+  logoImage = '/Untitled design.png',
   autoPlay = true,
   interval = 5000 
 }: SlideshowWithGridProps) {

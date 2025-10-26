@@ -24,7 +24,7 @@ export default function GiltFarmsWebsite() {
           <div className="flex justify-between items-center h-14 sm:h-16">
             <div className="flex items-center">
               <img 
-                src="/Logo image Oct 26, 2025, 01_28_59 AM.png" 
+                src="/Untitled design.png" 
                 alt="Gilt Tech Logo" 
                 className="h-8 w-8 sm:h-10 sm:w-10 object-contain"
               />
@@ -65,7 +65,7 @@ export default function GiltFarmsWebsite() {
       {/* Hero Section with Interactive Slideshow */}
       <section id="home" className="relative pt-14 sm:pt-16">
         <SlideshowWithGrid 
-          logoImage="/Logo image Oct 26, 2025, 01_28_59 AM.png"
+          logoImage="/Untitled design.png"
           autoPlay={true}
           interval={4000}
         />
@@ -204,7 +204,7 @@ export default function GiltFarmsWebsite() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center mb-4">
             <img 
-              src="/Logo image Oct 26, 2025, 01_28_59 AM.png" 
+              src="/Untitled design.png" 
               alt="Gilt Tech Logo" 
               className="h-8 w-8 object-contain mr-3"
             />
