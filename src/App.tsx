@@ -65,7 +65,7 @@ export default function GiltFarmsWebsite() {
       {/* Hero Section with Interactive Slideshow */}
       <section id="home" className="relative pt-14 sm:pt-16">
         <SlideshowWithGrid 
-          logoImage="Logo image Oct 26, 2025, 01_28_59 AM.png"
+          logoImage="/Logo image Oct 26, 2025, 01_28_59 AM.png"
           autoPlay={true}
           interval={4000}
         />
