@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail, Leaf, Cpu, Zap, Camera, Sun, Fish, Sprout, Users } from 'lucide-react';
+import { Menu, X, Phone, Mail, Leaf, Cpu, Zap, Camera, Sun, Fish, Sprout, Users, MessageCircle } from 'lucide-react';
 import { SlideshowWithGrid } from './components/SlideshowWithGrid';
 
 export default function GiltFarmsWebsite() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const openBot = () => {
+    window.open('https://gilt-assistance.zapier.app/?fbclid=IwY2xjawNqsVJleHRuA2FlbQIxMABicmlkETFhTDZ4MFo4Z2hNUXFPeU1nAR7d2kuhMjDTk0JKvSsBu8Sj2WfmVIS01Axbfl8g9i0cZKxDwJIamHtDOynLlQ_aem_5oqxNOsi63cwwMGsCIkZHg', '_blank', 'width=400,height=600,scrollbars=yes,resizable=yes');
+  };
 
   const services = [
     { icon: Sun, title: "Solar & Inverters", desc: "Renewable energy solutions for homes and agriculture" },
@@ -18,6 +22,17 @@ export default function GiltFarmsWebsite() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Floating Chat Button */}
+      <button
+        onClick={openBot}
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-4 rounded-full shadow-lg hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 transform hover:scale-110 group"
+        title="Chat with Gilt Assistance Bot"
+      >
+        <MessageCircle className="h-6 w-6" />
+        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center animate-pulse">
+          AI
+        </span>
+      </button>
       {/* Navigation */}
       <nav className="bg-gradient-to-r from-gray-900 to-gray-800 shadow-lg fixed w-full top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,7 +186,7 @@ export default function GiltFarmsWebsite() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg border border-yellow-500 hover:border-yellow-400 transition">
               <div className="flex items-center mb-4">
                 <Phone className="h-8 w-8 mr-4 text-yellow-400" />
@@ -192,6 +207,18 @@ export default function GiltFarmsWebsite() {
                   <a href="mailto:giltfarmstech@gmail.com" className="text-gray-300 hover:text-yellow-400 transition break-all">
                     giltfarmstech@gmail.com
                   </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg border border-yellow-500 hover:border-yellow-400 transition cursor-pointer" onClick={openBot}>
+              <div className="flex items-center mb-4">
+                <MessageCircle className="h-8 w-8 mr-4 text-yellow-400" />
+                <div>
+                  <h3 className="font-semibold text-lg">AI Assistant</h3>
+                  <p className="text-gray-300 hover:text-yellow-400 transition">
+                    Chat with our AI bot
+                  </p>
                 </div>
               </div>
             </div>

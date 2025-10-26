@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { InteractiveGrid } from '@/components/ui/interactive-grid';
+import { MessageCircle } from 'lucide-react';
 
 // Import your slideshow images from public directory
 const slideshowImages = [
@@ -33,6 +34,10 @@ export function SlideshowWithGrid({
   interval = 5000 
 }: SlideshowWithGridProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const openBot = () => {
+    window.open('https://gilt-assistance.zapier.app/?fbclid=IwY2xjawNqsVJleHRuA2FlbQIxMABicmlkETFhTDZ4MFo4Z2hNUXFPeU1nAR7d2kuhMjDTk0JKvSsBu8Sj2WfmVIS01Axbfl8g9i0cZKxDwJIamHtDOynLlQ_aem_5oqxNOsi63cwwMGsCIkZHg', '_blank', 'width=400,height=600,scrollbars=yes,resizable=yes');
+  };
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -127,6 +132,13 @@ export function SlideshowWithGrid({
             </button>
             <button className="bg-black bg-opacity-80 backdrop-blur-sm text-yellow-400 px-6 sm:px-8 py-3 rounded-lg font-semibold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-gray-900 transition shadow-xl text-sm sm:text-base">
               Get In Touch
+            </button>
+            <button 
+              onClick={openBot}
+              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:from-blue-400 hover:to-blue-500 transition shadow-xl border-2 border-blue-300 text-sm sm:text-base flex items-center gap-2"
+            >
+              <MessageCircle className="h-4 w-4" />
+              AI Assistant
             </button>
           </div>
         </div>
