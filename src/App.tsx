@@ -187,26 +187,28 @@ export default function GiltFarmsWebsite() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg border border-yellow-500 hover:border-yellow-400 transition">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg border border-yellow-500 hover:border-yellow-400 transition cursor-pointer" onClick={() => window.open('tel:+2349061749057', '_self')}>
               <div className="flex items-center mb-4">
                 <Phone className="h-8 w-8 mr-4 text-yellow-400" />
                 <div>
-                  <h3 className="font-semibold text-lg">Phone</h3>
-                  <a href="tel:+2349061749057" className="text-gray-300 hover:text-yellow-400 transition">
+                  <h3 className="font-semibold text-lg">Call Now</h3>
+                  <p className="text-gray-300 hover:text-yellow-400 transition text-lg font-medium">
                     +234 906 174 9057
-                  </a>
+                  </p>
+                  <p className="text-sm text-gray-400 mt-1">Tap to dial</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg border border-yellow-500 hover:border-yellow-400 transition">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg border border-yellow-500 hover:border-yellow-400 transition cursor-pointer" onClick={() => window.open('mailto:giltfarmstech@gmail.com', '_self')}>
               <div className="flex items-center mb-4">
                 <Mail className="h-8 w-8 mr-4 text-yellow-400" />
                 <div>
-                  <h3 className="font-semibold text-lg">Email</h3>
-                  <a href="mailto:giltfarmstech@gmail.com" className="text-gray-300 hover:text-yellow-400 transition break-all">
+                  <h3 className="font-semibold text-lg">Email Us</h3>
+                  <p className="text-gray-300 hover:text-yellow-400 transition break-all">
                     giltfarmstech@gmail.com
-                  </a>
+                  </p>
+                  <p className="text-sm text-gray-400 mt-1">Tap to compose</p>
                 </div>
               </div>
             </div>
@@ -219,6 +221,7 @@ export default function GiltFarmsWebsite() {
                   <p className="text-gray-300 hover:text-yellow-400 transition">
                     Chat with our AI bot
                   </p>
+                  <p className="text-sm text-gray-400 mt-1">Tap to chat</p>
                 </div>
               </div>
             </div>

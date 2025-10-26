@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { InteractiveGrid } from '@/components/ui/interactive-grid';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Phone } from 'lucide-react';
 
 // Import your slideshow images from public directory
 const slideshowImages = [
@@ -130,8 +130,12 @@ export function SlideshowWithGrid({
             <button className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-gray-900 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:from-yellow-400 hover:to-yellow-500 transition shadow-xl border-2 border-yellow-300 text-sm sm:text-base">
               Our Services
             </button>
-            <button className="bg-black bg-opacity-80 backdrop-blur-sm text-yellow-400 px-6 sm:px-8 py-3 rounded-lg font-semibold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-gray-900 transition shadow-xl text-sm sm:text-base">
-              Get In Touch
+            <button 
+              onClick={() => window.open('tel:+2349061749057', '_self')}
+              className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:from-green-400 hover:to-green-500 transition shadow-xl border-2 border-green-300 text-sm sm:text-base flex items-center gap-2"
+            >
+              <Phone className="h-4 w-4" />
+              Call Now
             </button>
             <button 
               onClick={openBot}
